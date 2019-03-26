@@ -4,19 +4,36 @@ import classnames from "classnames";
 import "./TextInput.css";
 
 export const TextInput = props => {
-  const { className, label, ...rest } = props;
+  const { className, label, valid, ...rest } = props;
   return (
     <label className={classnames("text-input", { [className]: !!className })}>
-      <div className="text-input__label">{label}</div>
-      <input {...rest} className="text-input__field" />
+      <div
+        className={classnames("text-input__label", {
+          "text-input__label_invalid": !valid
+        })}
+      >
+        {label}
+      </div>
+      <input
+        {...rest}
+        className={classnames("text-input__field", {
+          "text-input__field_invalid": !valid
+        })}
+      />
     </label>
   );
 };
 
+TextInput.defaultProps = {
+  valid: true
+};
+
 TextInput.propTypes = {
-  type: PropTypes.oneOf(["text", "password", "email"]),
+  type: PropTypes.oneOf(["text", "password"]),
   label: PropTypes.string,
   className: PropTypes.string,
   value: PropTypes.string,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  valid: PropTypes.bool
 };
+``;

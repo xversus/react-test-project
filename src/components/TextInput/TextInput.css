@@ -8,6 +8,10 @@
   color: rgba(66, 66, 66, 0.4);
 }
 
+.text-input__label_invalid {
+  color: #e1325a;
+}
+
 .text-input__field {
   width: 100%;
   height: 48px;
@@ -16,4 +20,8 @@
 
 .text-input__field:focus {
   border-bottom: 2px solid #6040b0;
+}
+
+.text-input__field_invalid {
+  border-bottom: 2px solid #e1325a !important;
 }
