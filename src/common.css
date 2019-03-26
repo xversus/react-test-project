@@ -1,0 +1,13 @@
+input {
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  border-radius: 1px;
+}
+
+.mb-1 {
+  margin-bottom: 12px;
+}
+
+.mb-2 {
+  margin-bottom: 32px;
+}
