@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { fetch } from "whatwg-fetch";
 import { Spinner } from "../Spinner";
 import starIcon from "../../images/star.svg";
 import watchIcon from "../../images/watch.svg";
