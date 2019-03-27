@@ -25,7 +25,8 @@ export const TextInput = props => {
 };
 
 TextInput.defaultProps = {
-  valid: true
+  valid: true,
+  type: "text"
 };
 
 TextInput.propTypes = {
@@ -36,4 +37,3 @@ TextInput.propTypes = {
   onChange: PropTypes.func,
   valid: PropTypes.bool
 };
-``;
